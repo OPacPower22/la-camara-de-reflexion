@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Cámara de Reflexión</title>
+  <!-- Fuentes Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&family=Merriweather&display=swap" rel="stylesheet" />
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F9F7F1;
+      color: #333333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+    }
+
+    a {
+      color: #C5A85A;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #A58B43;
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #1A2A4A;
+      color: #F9F7F1;
+      padding: 15px 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    main {
+      margin-top: 85px; /* espacio para header fijo */
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #1A2A4A;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      font-size: 20px;
+      font-style: italic;
+      color: #666666;
+      margin-bottom: 40px;
+      border-left: 5px solid #C5A85A;
+      padding-left: 15px;
+    }
+
+    .btn {
+      background-color: #C5A85A;
+      color: #1A2A4A;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: #A58B43;
+      color: #F9F7F1;
+    }
+
+    /* Sidebar opcional */
+    aside {
+      position: fixed;
+      right: 0;
+      top: 85px;
+      width: 280px;
+      height: calc(100vh - 85px);
+      background-color: #F9F7F1;
+      border-left: 1px solid #ddd;
+      padding: 20px;
+      overflow-y: auto;
+      font-size: 14px;
+      display: none; /* oculto en móvil */
+    }
+
+    aside h3 {
+      color: #1A2A4A;
+      margin-bottom: 15px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    aside ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1A2A4A;
+      color: #F9F7F1;
+      text-align: center;
+      padding: 20px 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media(min-width: 1024px) {
+      main {
+        margin-right: 300px; /* espacio para sidebar */
+      }
+      aside {
+        display: block;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">La Cámara de Reflexión</div>
+    <nav>
+      <ul>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#simbolos">Simbología</a></li>
+        <li><a href="#filosofia">Filosofía</a></li>
+        <li><a href="#reflexion">Reflexión</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="bienvenida">
+      <h1>Bienvenidos a La Cámara de Reflexión</h1>
+      <p class="intro">Un espacio creado para quienes desean descubrir la sabiduría oculta y la luz interior a través de la masonería.</p>
+      <p>La masonería ha sido desde tiempos inmemoriales un espacio de misterio, simbolismo y búsqueda constante de sabiduría. Este blog nace para abrir una puerta hacia ese mundo simbólico y filosófico, para que cada lector pueda descubrir, aprender y aplicar en su vida diaria las enseñanzas que ofrece.</p>
+      <button class="btn" onclick="subscribe()">Suscríbete para recibir contenido exclusivo</button>
+    </section>
+
+    <section id="historia">
+      <h2>Historia de la Masonería</h2>
+      <article>
+        <h3>Orígenes y evolución</h3>
+        <p>Exploraremos los orígenes antiguos de la masonería, su evolución y cómo ha influido en la historia mundial.</p>
+      </article>
+      <article>
+        <h3>Grandes figuras masónicas</h3>
+        <p>Conoce a los personajes históricos que han dejado huella en esta tradición.</p>
+      </article>
+    </section>
+
+    <section id="simbolos">
+      <h2>Simbología Masónica</h2>
+      <article>
+        <h3>El compás y la escuadra</h3>
+        <p>Descubre el profundo significado detrás de estos símbolos esenciales.</p>
+      </article>
+      <article>
+        <h3>Piedra bruta y piedra pulida</h3>
+        <p>El trabajo sobre uno mismo para alcanzar la perfección interior.</p>
+      </article>
+    </section>
+
+    <section id="filosofia">
+      <h2>Filosofía y Valores</h2>
+      <article>
+        <h3>Libertad, Igualdad y Fraternidad</h3>
+        <p>Los pilares fundamentales que guían a los masones en su camino.</p>
+      </article>
+      <article>
+        <h3>El concepto de Luz</h3>
+        <p>La búsqueda del conocimiento y la sabiduría como motor de la vida masónica.</p>
+      </article>
+    </section>
+
+    <section id="reflexion">
+      <h2>Reflexión y Desarrollo Personal</h2>
+      <article>
+        <h3>La Cámara de Reflexión</h3>
+        <p>Un espacio simbólico para la introspección y la preparación al cambio.</p>
+      </article>
+      <article>
+        <h3>Principios aplicados en la vida diaria</h3>
+        <p>Cómo llevar los valores masónicos a nuestro día a día para transformar nuestra realidad.</p>
+      </article>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes preguntas o quieres compartir tus reflexiones? Escríbenos:</p>
+      <form id="contactForm">
+        <label for="name">Nombre:</label><br />
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;" />
+        <label for="email">Correo electrónico:</label><br />
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;" />
+        <label for="message">Mensaje:</label><br />
+        <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <aside>
+    <h3>Temas Populares</h3>
+    <ul>
+      <li><a href="#historia">Historia de la Masonería</a></li>
+      <li><a href="#simbolos">Simbología Masónica</a></li>
+      <li><a href="#filosofia">Filosofía y Valores</a></li>
+      <li><a href="#reflexion">Reflexión Personal</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </aside>
+
+  <footer>
+    &copy; 2025 La Cámara de Reflexión | Todos los derechos reservados
+  </footer>
+
+  <script>
+    // Simula suscripción (puedes conectar con backend o servicio real)
+    function subscribe() {
+      alert('Gracias por suscribirte. Próximamente recibirás contenido exclusivo en tu correo.');
+    }
+
+    // Validación simple del formulario y prevent default submit
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+
+      if(name === '' || email === '' || message === '') {
+        alert('Por favor, completa todos los campos.');
+        return;
+      }
+
+      // Aquí podrías agregar integración con un backend o servicio de email
+      alert(`Gracias, ${name}. Hemos recibido tu mensaje.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
